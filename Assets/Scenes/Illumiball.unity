@@ -255,7 +255,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.50980395, g: 0.50980395, b: 1, a: 1}
+  m_Color: {r: 0.50980395, g: 1, b: 0.50980395, a: 1}
   m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
@@ -290,7 +290,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -382,7 +382,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -751,7 +751,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 910883478}
   m_Layer: 0
   m_Name: BallRed
-  m_TagString: Untagged
+  m_TagString: BallRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -859,7 +859,7 @@ Transform:
   m_Children:
   - {fileID: 2143070008}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &910883478
 Rigidbody:
@@ -1068,7 +1068,7 @@ GameObject:
   - component: {fileID: 1131870538}
   m_Layer: 0
   m_Name: BallBlue
-  m_TagString: Untagged
+  m_TagString: BallBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1146,7 +1146,7 @@ Transform:
   m_Children:
   - {fileID: 176691390}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1131870538
 Rigidbody:
@@ -1174,6 +1174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1149676589}
   - component: {fileID: 1149676588}
+  - component: {fileID: 1149676590}
   m_Layer: 0
   m_Name: HoleGreen
   m_TagString: Untagged
@@ -1209,6 +1210,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1149676590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149676587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083cca252c94d4a259459a9d4e5200b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: BallGreen
 --- !u!1 &1224086221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230555480}
   - component: {fileID: 1230555479}
+  - component: {fileID: 1230555481}
   m_Layer: 0
   m_Name: HoleBlue
   m_TagString: Untagged
@@ -1347,6 +1362,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1230555481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230555478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083cca252c94d4a259459a9d4e5200b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: BallBlue
 --- !u!1 &1335551236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,6 +1385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1335551238}
   - component: {fileID: 1335551237}
+  - component: {fileID: 1335551239}
   m_Layer: 0
   m_Name: HoleRed
   m_TagString: Untagged
@@ -1392,6 +1421,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1335551239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335551236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083cca252c94d4a259459a9d4e5200b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: BallRed
 --- !u!1 &1342927613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +1947,7 @@ GameObject:
   - component: {fileID: 2012103637}
   m_Layer: 0
   m_Name: BallGreen
-  m_TagString: Untagged
+  m_TagString: BallGreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1983,7 +2025,7 @@ Transform:
   m_Children:
   - {fileID: 480264115}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2012103637
 Rigidbody:
