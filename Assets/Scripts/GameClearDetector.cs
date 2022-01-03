@@ -10,6 +10,8 @@ public class GameClearDetector : MonoBehaviour
 
   void OnGUI()
   {
+    // GUI.matrix = Matrix4x4.Scale(Vector3.one * 2);
+
     // 全てのボールが入ったらラベルを表示
     if (holeRed.IsHolding() &&
        holeBlue.IsHolding() &&
