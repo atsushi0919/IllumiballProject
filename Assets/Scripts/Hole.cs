@@ -4,13 +4,35 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
+
   // どのボールを吸い寄せるかをタグで指定
-  // 1. 反応するタグのパラメータ
   public string targetTag;
+  bool isHolding;
+
+  // ボールが入っているかを返す
+  public bool IsHolding()
+  {
+    return isHolding;
+  }
+
+  void OnTriggerEnter(Collider other)
+  {
+    if (other.gameObject.tag == targetTag)
+    {
+      isHolding = true;
+    }
+  }
+
+  void OnTriggerExit(Collider other)
+  {
+    if (other.gameObject.tag == targetTag)
+    {
+      isHolding = false;
+    }
+  }
 
   void OnTriggerStay(Collider other)
   {
-    // 2. Rigidbodyコンポーネントの取得
     // コライダに触れているオブジェクトのRigidbodyコンポーネントを取得
     Rigidbody r = other.gameObject.GetComponent<Rigidbody>();
 
